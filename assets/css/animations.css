@@ -1,0 +1,220 @@
+/* ===============================================
+   Animaciones
+   =============================================== */
+
+/* Animación de Grid */
+@keyframes gridMove {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(50px);
+  }
+}
+
+/* Animación de Scroll */
+@keyframes scrollDown {
+  0% {
+    opacity: 1;
+    transform: translate(-50%, 0);
+  }
+  100% {
+    opacity: 0;
+    transform: translate(-50%, 15px);
+  }
+}
+
+/* Animación de Flotación */
+@keyframes float {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+}
+
+.animate-float {
+  animation: float 6s ease-in-out infinite;
+}
+
+/* Efecto de Glitch */
+@keyframes glitch {
+  0% {
+    text-shadow: 2px 2px 0 var(--primary-cyan), -2px -2px 0 var(--primary-blue);
+  }
+  25% {
+    text-shadow: -2px 2px 0 var(--primary-cyan), 2px -2px 0 var(--primary-blue);
+  }
+  50% {
+    text-shadow: 2px -2px 0 var(--primary-cyan), -2px 2px 0 var(--primary-blue);
+  }
+  75% {
+    text-shadow: -2px -2px 0 var(--primary-cyan), 2px 2px 0 var(--primary-blue);
+  }
+  100% {
+    text-shadow: 2px 2px 0 var(--primary-cyan), -2px -2px 0 var(--primary-blue);
+  }
+}
+
+.glitch-text:hover {
+  animation: glitch 0.3s infinite;
+}
+
+/* Animación de Typewriter */
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 60%;
+  }
+}
+
+@keyframes blink {
+  50% {
+    border-color: transparent;
+  }
+}
+
+.typewriter {
+  display: inline-block;
+  overflow: hidden;
+  border-right: 3px solid var(--primary-cyan);
+  white-space: nowrap;
+  animation: typing 3.5s steps(30) 1s 1 normal both, blink 0.75s step-end infinite;
+}
+
+/* Fade In Animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.fade-in {
+  animation: fadeIn 0.8s ease-out forwards;
+}
+
+/* Pulso de Neón */
+@keyframes neonPulse {
+  0%,
+  100% {
+    box-shadow: 0 0 20px rgba(0, 240, 255, 0.5), 0 0 40px rgba(0, 240, 255, 0.3), 0 0 60px rgba(0, 240, 255, 0.2);
+  }
+  50% {
+    box-shadow: 0 0 30px rgba(0, 240, 255, 0.7), 0 0 60px rgba(0, 240, 255, 0.5), 0 0 90px rgba(0, 240, 255, 0.3);
+  }
+}
+
+.neon-pulse {
+  animation: neonPulse 2s ease-in-out infinite;
+}
+
+/* Slide In desde la izquierda */
+@keyframes slideInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.slide-in-left {
+  animation: slideInLeft 0.8s ease-out forwards;
+}
+
+/* Slide In desde la derecha */
+@keyframes slideInRight {
+  from {
+    opacity: 0;
+    transform: translateX(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.slide-in-right {
+  animation: slideInRight 0.8s ease-out forwards;
+}
+
+/* Zoom In */
+@keyframes zoomIn {
+  from {
+    opacity: 0;
+    transform: scale(0.8);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.zoom-in {
+  animation: zoomIn 0.6s ease-out forwards;
+}
+
+/* Rotación continua */
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.rotate-continuous {
+  animation: rotate 20s linear infinite;
+}
+
+/* Efecto de aparición con retraso */
+.stagger-fade-in {
+  opacity: 0;
+  animation: fadeIn 0.8s ease-out forwards;
+}
+
+.stagger-fade-in:nth-child(1) {
+  animation-delay: 0.1s;
+}
+.stagger-fade-in:nth-child(2) {
+  animation-delay: 0.2s;
+}
+.stagger-fade-in:nth-child(3) {
+  animation-delay: 0.3s;
+}
+.stagger-fade-in:nth-child(4) {
+  animation-delay: 0.4s;
+}
+.stagger-fade-in:nth-child(5) {
+  animation-delay: 0.5s;
+}
+.stagger-fade-in:nth-child(6) {
+  animation-delay: 0.6s;
+}
+
+/* Animación de borde neón */
+@keyframes borderGlow {
+  0%,
+  100% {
+    border-color: rgba(0, 240, 255, 0.2);
+  }
+  50% {
+    border-color: rgba(0, 240, 255, 0.8);
+  }
+}
+
+.border-glow {
+  animation: borderGlow 3s ease-in-out infinite;
+}
