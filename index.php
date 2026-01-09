@@ -10,7 +10,7 @@ include 'includes/header.php';
         <div class="circuit-bg"></div>
         <div class="container">
             <div class="hero-content">
-                <h1 class="glitch-text" data-text="BeaTaN CODE">PRUEBA DE SUBIDA</h1>
+                <h1 class="glitch-text" data-text="BeaTaN CODE">PRUEBA DE SUBIDA BEATANCODE</h1>
                 <p class="hero-subtitle typewriter">Desarrollador Web Full Stack</p>
                 <p class="hero-description">Creando experiencias digitales innovadoras con código limpio y diseño cutting-edge</p>
                 <div class="cta-buttons">
