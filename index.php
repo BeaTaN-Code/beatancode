@@ -47,7 +47,7 @@ include 'includes/header.php';
                         <div class="stat-label">Proyectos Completados</div>
                     </div>
                     <div class="stat-card">
-                        <div class="stat-number counter" data-target="50">0</div>
+                        <div class="stat-number counter" data-target="5">0</div>
                         <div class="stat-label">Años de Experiencia</div>
                     </div>
                     <div class="stat-card">
