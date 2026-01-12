@@ -315,6 +315,9 @@ body {
 
 .hero-container h1 span {
   color: #32B2CF;
+  font-family: var(--font-title);
+  font-weight: 700;
+  letter-spacing: 0.5px;
 }
 
 .hero-container > p {
