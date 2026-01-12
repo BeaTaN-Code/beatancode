@@ -197,7 +197,7 @@ body {
 /* RESPONSIVE */
 @media (max-width: 768px) {
   body {
-    padding-top: 70px;
+    padding-top: 60px;
   }
 
   .nav-toggle {
