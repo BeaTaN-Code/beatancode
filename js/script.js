@@ -376,8 +376,13 @@
   function validateField(field) {
     const value = field.value.trim();
     const isEmpty = value === '';
-    
-    // Validación para campo email
+    // Si el campo NO es required y está vacío, no bloquea (p.e. telefono)
+    if (!field.hasAttribute('required') && isEmpty) {
+      field.classList.remove('invalid');
+      return true;
+    }
+
+    // Validación para campo email (si está presente debe ser válido)
     if (field.id === 'email') {
       const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
       if (isEmpty || !emailRegex.test(value)) {
@@ -388,15 +393,16 @@
         return true;
       }
     }
-    
-    // Validación para otros campos
-    if (isEmpty) {
+
+    // Para campos requeridos: no vacíos
+    if (field.hasAttribute('required') && isEmpty) {
       field.classList.add('invalid');
       return false;
-    } else {
-      field.classList.remove('invalid');
-      return true;
     }
+
+    // Si llega aquí, es válido (campo opcional vacío o campo no-email con contenido)
+    field.classList.remove('invalid');
+    return true;
   }
 
 // Mostrar mensaje de éxito/error luego del envío (procesar_contacto.php redirige con ?success=1 o ?success=0)

@@ -42,7 +42,7 @@ try {
         header('Content-Type: application/json', true, 500);
         echo json_encode(['success' => false, 'error' => 'No se pudo conectar a la base de datos.']);
     } else {
-        header('Location: index.html#contacto?success=0');
+        header('Location: index.html#contacto?success=0&err=conn_error');
     }
     exit;
 }
@@ -102,6 +102,17 @@ try {
     $columns = [];
 }
 
+// Si no pudimos obtener columnas, redirigir con detalle
+if (empty($columns)) {
+    if (isset($_SERVER['HTTP_ACCEPT']) && strpos($_SERVER['HTTP_ACCEPT'], 'application/json') !== false) {
+        header('Content-Type: application/json', true, 500);
+        echo json_encode(['success' => false, 'error' => 'No se pudieron obtener las columnas de la tabla.']);
+    } else {
+        header('Location: index.html#contacto?success=0&err=no_columns');
+    }
+    exit;
+}
+
 $fieldCandidates = ['nombre','email','telefono','asunto','mensaje','estado'];
 $insertCols = [];
 $placeholders = [];
@@ -132,7 +143,7 @@ if (empty($insertCols)) {
         header('Content-Type: application/json', true, 400);
         echo json_encode(['success' => false, 'error' => 'Campos requeridos faltantes.']);
     } else {
-        header('Location: index.html#contacto?success=0');
+        header('Location: index.html#contacto?success=0&err=no_fields_to_insert');
     }
     exit;
 }
@@ -155,7 +166,7 @@ try {
         header('Content-Type: application/json', true, 500);
         echo json_encode(['success' => false, 'error' => 'Error al guardar el mensaje.']);
     } else {
-        header('Location: index.html#contacto?success=0');
+        header('Location: index.html#contacto?success=0&err=insert_error');
     }
     exit;
 }
