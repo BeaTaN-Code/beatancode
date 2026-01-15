@@ -26,6 +26,16 @@ $dbUser = $env['DB_USER'] ?? '';
 $dbPass = $env['DB_PASSWORD'] ?? '';
 $tableName = $env['DB_TABLE'] ?? 'FORMULARIO';
 
+function write_debug_log($line) {
+    $path = __DIR__ . '/contact_debug.log';
+    $entry = '[' . date('Y-m-d H:i:s') . '] ' . $line . PHP_EOL;
+    @file_put_contents($path, $entry, FILE_APPEND | LOCK_EX);
+}
+
+// Registrar intento de petición
+write_debug_log('REQUEST: ' . ($_SERVER['REQUEST_METHOD'] ?? 'CLI') . ' ' . ($_SERVER['REQUEST_URI'] ?? '')); 
+write_debug_log('POST: ' . json_encode($_POST, JSON_UNESCAPED_UNICODE));
+
 try {
     if ($dbType === 'postgres' || $dbType === 'pgsql') {
         $dsn = "pgsql:host={$dbHost};port={$dbPort};dbname={$dbName}";
@@ -150,8 +160,13 @@ if (empty($insertCols)) {
 
 try {
     $sql = 'INSERT INTO ' . $tableName . ' (' . implode(', ', $insertCols) . ') VALUES (' . implode(', ', $placeholders) . ')';
+    // Log SQL and params for debugging
+    write_debug_log('SQL: ' . $sql);
+    write_debug_log('PARAMS: ' . json_encode($params, JSON_UNESCAPED_UNICODE));
     $stmt = $pdo->prepare($sql);
     $stmt->execute($params);
+
+    write_debug_log('INSERT OK - lastInsertId: ' . $pdo->lastInsertId());
 
     if (isset($_SERVER['HTTP_ACCEPT']) && strpos($_SERVER['HTTP_ACCEPT'], 'application/json') !== false) {
         header('Content-Type: application/json');
@@ -162,6 +177,7 @@ try {
     exit;
 } catch (Exception $e) {
     error_log('DB insert error: ' . $e->getMessage());
+    write_debug_log('INSERT ERROR: ' . $e->getMessage());
     if (isset($_SERVER['HTTP_ACCEPT']) && strpos($_SERVER['HTTP_ACCEPT'], 'application/json') !== false) {
         header('Content-Type: application/json', true, 500);
         echo json_encode(['success' => false, 'error' => 'Error al guardar el mensaje.']);
