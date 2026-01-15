@@ -22,7 +22,7 @@ $dbPort = $env['DB_PORT'] ?? ($dbType === 'postgres' ? '5432' : '3306');
 $dbName = $env['DB_NAME'] ?? '';
 $dbUser = $env['DB_USER'] ?? '';
 $dbPass = $env['DB_PASSWORD'] ?? '';
-$table = $env['DB_TABLE'] ?? 'contact_messages';
+$table = $env['DB_TABLE'] ?? 'FORMULARIO';
 
 header('Content-Type: text/plain; charset=utf-8');
 echo "Intentando conectar usando las variables de .env\n";
