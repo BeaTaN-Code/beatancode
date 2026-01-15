@@ -398,3 +398,39 @@
       return true;
     }
   }
+
+// Mostrar mensaje de éxito/error luego del envío (procesar_contacto.php redirige con ?success=1 o ?success=0)
+function showContactResultFromQuery() {
+  try {
+    const url = new URL(window.location.href);
+    const success = url.searchParams.get('success');
+    if (success === null) return;
+    const container = document.getElementById('contactMessage');
+    if (!container) return;
+    container.style.marginBottom = '1rem';
+    container.style.padding = '0.75rem 1rem';
+    container.style.borderRadius = '6px';
+    container.style.fontWeight = '600';
+    if (success === '1') {
+      container.style.background = 'rgba(46, 204, 113, 0.12)';
+      container.style.color = '#2ecc71';
+      container.textContent = 'Mensaje enviado correctamente. ¡Gracias!';
+    } else {
+      container.style.background = 'rgba(231, 76, 60, 0.08)';
+      container.style.color = '#e74c3c';
+      container.textContent = 'Ocurrió un error al enviar. Por favor inténtalo de nuevo.';
+    }
+
+    // Remover el parámetro de la URL para evitar mostrarlo nuevamente al recargar
+    url.searchParams.delete('success');
+    history.replaceState(null, '', url.pathname + url.hash);
+  } catch (e) {
+    // no bloquear si hay error
+  }
+}
+
+if (document.readyState === 'loading') {
+  document.addEventListener('DOMContentLoaded', showContactResultFromQuery);
+} else {
+  showContactResultFromQuery();
+}
