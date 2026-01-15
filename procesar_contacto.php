@@ -24,7 +24,7 @@ $dbPort = $env['DB_PORT'] ?? ($dbType === 'postgres' ? '5432' : '3306');
 $dbName = $env['DB_NAME'] ?? '';
 $dbUser = $env['DB_USER'] ?? '';
 $dbPass = $env['DB_PASSWORD'] ?? '';
-$tableName = $env['DB_TABLE'] ?? 'contact_messages';
+$tableName = $env['DB_TABLE'] ?? 'FORMULARIO';
 
 try {
     if ($dbType === 'postgres' || $dbType === 'pgsql') {
