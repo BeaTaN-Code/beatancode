@@ -277,6 +277,7 @@ body {
   justify-content: center;
   position: relative;
   overflow: hidden;
+  margin-top: -20px;
 }
 
 .hero-section::before {
@@ -666,7 +667,7 @@ body {
 
 .tecnologias .technologies-logos {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
   gap: 30px;
   max-width: 1200px;
   margin: 0 auto;
@@ -687,220 +688,83 @@ body {
   transition: all 0.3s ease;
 }
 
-/* HTML 5 - Color Rojo */
+/* HTML */
 .tech-item:nth-child(1) i {
-  color: #E34C26;
-  text-shadow: 0 0 15px rgba(227, 76, 38, 0.6), 0 0 30px rgba(227, 76, 38, 0.3);
+  color: #E34F26;
+  text-shadow: 0 0 18px rgba(227,79,38,0.8);
 }
 
-.tech-item:nth-child(1):hover i {
-  color: #FF6B4A;
-  text-shadow: 0 0 20px rgba(227, 76, 38, 0.8), 0 0 40px rgba(227, 76, 38, 0.5);
-  transform: scale(1.2);
-}
-
-/* CSS 3 - Color Azul */
+/* CSS */
 .tech-item:nth-child(2) i {
-  color: #264DE4;
-  text-shadow: 0 0 15px rgba(38, 77, 228, 0.6), 0 0 30px rgba(38, 77, 228, 0.3);
+  color: #1572B6;
+  text-shadow: 0 0 18px rgba(21,114,182,0.8);
 }
 
-.tech-item:nth-child(2):hover i {
-  color: #4169FF;
-  text-shadow: 0 0 20px rgba(38, 77, 228, 0.8), 0 0 40px rgba(38, 77, 228, 0.5);
-  transform: scale(1.2);
-}
-
-/* JavaScript - Color Amarillo */
+/* JavaScript */
 .tech-item:nth-child(3) i {
   color: #F7DF1E;
-  text-shadow: 0 0 15px rgba(247, 223, 30, 0.6), 0 0 30px rgba(247, 223, 30, 0.3);
+  text-shadow: 0 0 18px rgba(247,223,30,0.9);
 }
 
-.tech-item:nth-child(3):hover i {
-  color: #FFF700;
-  text-shadow: 0 0 20px rgba(247, 223, 30, 0.8), 0 0 40px rgba(247, 223, 30, 0.5);
-  transform: scale(1.2);
-}
-
-/* PHP - Color Púrpura */
+/* PHP */
 .tech-item:nth-child(4) i {
   color: #777BB4;
-  text-shadow: 0 0 15px rgba(119, 123, 180, 0.6), 0 0 30px rgba(119, 123, 180, 0.3);
+  text-shadow: 0 0 18px rgba(119,123,180,0.8);
 }
 
-.tech-item:nth-child(4):hover i {
-  color: #9999FF;
-  text-shadow: 0 0 20px rgba(119, 123, 180, 0.8), 0 0 40px rgba(119, 123, 180, 0.5);
-  transform: scale(1.2);
-}
-
-/* React - Color Cyan */
+/* React */
 .tech-item:nth-child(5) i {
   color: #61DAFB;
-  text-shadow: 0 0 15px rgba(97, 218, 251, 0.6), 0 0 30px rgba(97, 218, 251, 0.3);
+  text-shadow: 0 0 20px rgba(97,218,251,0.9);
 }
 
-.tech-item:nth-child(5):hover i {
-  color: #00D9FF;
-  text-shadow: 0 0 20px rgba(97, 218, 251, 0.8), 0 0 40px rgba(97, 218, 251, 0.5);
-  transform: scale(1.2);
+/* TypeScript (IMG) */
+.tech-item:nth-child(6) img {
+  filter: drop-shadow(0 0 18px rgba(49,120,198,0.9));
 }
 
-/* Laravel - Color Rojo */
-.tech-item:nth-child(6) i {
-  color: #FF2D20;
-  text-shadow: 0 0 15px rgba(255, 45, 32, 0.6), 0 0 30px rgba(255, 45, 32, 0.3);
-}
-
-.tech-item:nth-child(6):hover i {
-  color: #FF6B5B;
-  text-shadow: 0 0 20px rgba(255, 45, 32, 0.8), 0 0 40px rgba(255, 45, 32, 0.5);
-  transform: scale(1.2);
-}
-
-/* Selenium - Color Verde */
+/* GitHub */
 .tech-item:nth-child(7) i {
-  color: #43B02A;
-  text-shadow: 0 0 15px rgba(67, 176, 42, 0.6), 0 0 30px rgba(67, 176, 42, 0.3);
+  color: #ffffff;
+  text-shadow: 0 0 18px rgba(255,255,255,0.6);
 }
 
-.tech-item:nth-child(7):hover i {
-  color: #66FF00;
-  text-shadow: 0 0 20px rgba(67, 176, 42, 0.8), 0 0 40px rgba(67, 176, 42, 0.5);
-  transform: scale(1.2);
-}
-
-/* UiPath - Naranja */
+/* Docker */
 .tech-item:nth-child(8) i {
-  color: #FF6B00;
-  text-shadow: 0 0 15px rgba(255, 107, 0, 0.6), 0 0 30px rgba(255, 107, 0, 0.3);
-}
-
-.tech-item:nth-child(8):hover i {
-  color: #FF8C42;
-  text-shadow: 0 0 20px rgba(255, 107, 0, 0.8), 0 0 40px rgba(255, 107, 0, 0.5);
-  transform: scale(1.2);
-}
-
-/* Docker - Color Azul Claro */
-.tech-item:nth-child(9) i {
   color: #2496ED;
-  text-shadow: 0 0 15px rgba(36, 150, 237, 0.6), 0 0 30px rgba(36, 150, 237, 0.3);
+  text-shadow: 0 0 18px rgba(36,150,237,0.9);
 }
 
-.tech-item:nth-child(9):hover i {
-  color: #4CB9FF;
-  text-shadow: 0 0 20px rgba(36, 150, 237, 0.8), 0 0 40px rgba(36, 150, 237, 0.5);
-  transform: scale(1.2);
+/* MySQL (IMG) */
+.tech-item:nth-child(9) img {
+  filter: drop-shadow(0 0 18px rgba(0,117,143,0.9));
 }
 
-/* MySQL - Color Azul Oscuro */
+/* Laravel */
 .tech-item:nth-child(10) i {
-  color: #00758F;
-  text-shadow: 0 0 15px rgba(0, 117, 143, 0.6), 0 0 30px rgba(0, 117, 143, 0.3);
+  color: #FF2D20;
+  text-shadow: 0 0 18px rgba(255,45,32,0.9);
 }
 
-.tech-item:nth-child(10):hover i {
-  color: #00A5DB;
-  text-shadow: 0 0 20px rgba(0, 117, 143, 0.8), 0 0 40px rgba(0, 117, 143, 0.5);
-  transform: scale(1.2);
+/* VS Code (IMG) */
+.tech-item:nth-child(11) img {
+  filter: drop-shadow(0 0 18px rgba(0,120,212,0.9));
 }
 
-/* PhpMyAdmin - Color Verde Oscuro */
-.tech-item:nth-child(11) i {
-  color: #667BC6;
-  text-shadow: 0 0 15px rgba(102, 123, 198, 0.6), 0 0 30px rgba(102, 123, 198, 0.3);
+/* UiPath (IMG) */
+.tech-item:nth-child(12) img {
+  filter: drop-shadow(0 0 18px rgba(255,108,0,0.9));
 }
 
-.tech-item:nth-child(11):hover i {
-  color: #8B9FFF;
-  text-shadow: 0 0 20px rgba(102, 123, 198, 0.8), 0 0 40px rgba(102, 123, 198, 0.5);
-  transform: scale(1.2);
+/* Photoshop (IMG) */
+.tech-item:nth-child(13) img {
+  filter: drop-shadow(0 0 18px rgba(49,168,255,0.9));
 }
 
-/* GitHub - Color Blanco */
-.tech-item:nth-child(12) i {
-  color: #FFFFFF;
-  text-shadow: 0 0 15px rgba(255, 255, 255, 0.4), 0 0 30px rgba(255, 255, 255, 0.2);
-}
-
-.tech-item:nth-child(12):hover i {
-  color: #F0F0F0;
-  text-shadow: 0 0 20px rgba(255, 255, 255, 0.6), 0 0 40px rgba(255, 255, 255, 0.4);
-  transform: scale(1.2);
-}
-
-/* Hostinger - Color Naranja */
-.tech-item:nth-child(13) i {
-  color: #FF7A00;
-  text-shadow: 0 0 15px rgba(255, 122, 0, 0.6), 0 0 30px rgba(255, 122, 0, 0.3);
-}
-
-.tech-item:nth-child(13):hover i {
-  color: #FF9933;
-  text-shadow: 0 0 20px rgba(255, 122, 0, 0.8), 0 0 40px rgba(255, 122, 0, 0.5);
-  transform: scale(1.2);
-}
-
-/* Figma - Color Rosa */
+/* Figma */
 .tech-item:nth-child(14) i {
   color: #F24E1E;
-  text-shadow: 0 0 15px rgba(242, 78, 30, 0.6), 0 0 30px rgba(242, 78, 30, 0.3);
-}
-
-.tech-item:nth-child(14):hover i {
-  color: #FF6B42;
-  text-shadow: 0 0 20px rgba(242, 78, 30, 0.8), 0 0 40px rgba(242, 78, 30, 0.5);
-  transform: scale(1.2);
-}
-
-/* Photoshop - Color Azul Fotoshop */
-.tech-item:nth-child(15) i {
-  color: #31A8FF;
-  text-shadow: 0 0 15px rgba(49, 168, 255, 0.6), 0 0 30px rgba(49, 168, 255, 0.3);
-}
-
-.tech-item:nth-child(15):hover i {
-  color: #5BC0FF;
-  text-shadow: 0 0 20px rgba(49, 168, 255, 0.8), 0 0 40px rgba(49, 168, 255, 0.5);
-  transform: scale(1.2);
-}
-
-/* VS Code - Color Azul VS Code */
-.tech-item:nth-child(16) i {
-  color: #0078D4;
-  text-shadow: 0 0 15px rgba(0, 120, 212, 0.6), 0 0 30px rgba(0, 120, 212, 0.3);
-}
-
-.tech-item:nth-child(16):hover i {
-  color: #00AAFF;
-  text-shadow: 0 0 20px rgba(0, 120, 212, 0.8), 0 0 40px rgba(0, 120, 212, 0.5);
-  transform: scale(1.2);
-}
-
-/* Postman - Color Naranja Postman */
-.tech-item:nth-child(17) i {
-  color: #FF6C37;
-  text-shadow: 0 0 15px rgba(255, 108, 55, 0.6), 0 0 30px rgba(255, 108, 55, 0.3);
-}
-
-.tech-item:nth-child(17):hover i {
-  color: #FF8C66;
-  text-shadow: 0 0 20px rgba(255, 108, 55, 0.8), 0 0 40px rgba(255, 108, 55, 0.5);
-  transform: scale(1.2);
-}
-
-/* APIs - Color Verde Brillante */
-.tech-item:nth-child(18) i {
-  color: #00D084;
-  text-shadow: 0 0 15px rgba(0, 208, 132, 0.6), 0 0 30px rgba(0, 208, 132, 0.3);
-}
-
-.tech-item:nth-child(18):hover i {
-  color: #00FF99;
-  text-shadow: 0 0 20px rgba(0, 208, 132, 0.8), 0 0 40px rgba(0, 208, 132, 0.5);
-  transform: scale(1.2);
+  text-shadow: 0 0 18px rgba(242,78,30,0.9);
 }
 
 .tech-label {
@@ -919,6 +783,11 @@ body {
   visibility: hidden;
   transition: all 0.3s ease;
   box-shadow: 0 4px 15px rgba(50, 178, 207, 0.4);
+}
+
+.tech-item:hover i,
+.tech-item:hover img {
+  transform: scale(1.25);
 }
 
 .tech-item:hover .tech-label {
@@ -1082,6 +951,42 @@ body {
   border-color: var(--primary-cyan);
   background: rgba(50, 178, 207, 0.15);
   transform: scale(1.1);
+}
+
+.project-tech-item {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.project-tech-label {
+  position: absolute;
+  bottom: 120%;
+  left: 50%;
+  transform: translateX(-50%) translateY(10px);
+  background-color: rgba(19, 19, 26, 0.95);
+  color: #32B2CF;
+  padding: 5px 12px;
+  font-size: 0.75rem;
+  border-radius: 6px;
+  font-weight: 600;
+  white-space: nowrap;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s ease;
+  pointer-events: none;
+  border: 1px solid rgba(50, 178, 207, 0.2);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+  width: auto;
+  height: auto;
+  display: block;
+}
+
+.project-tech-item:hover .project-tech-label {
+  opacity: 1;
+  visibility: visible;
+  transform: translateX(-50%) translateY(0);
 }
 
 .project-link {
@@ -1423,7 +1328,7 @@ body {
   EQUIPO - CARDS
    =============================================== */
 
-/* From Uiverse.io by Centered101 */ 
+/* From Uiverse.io by Centered101 */
 .card {
   width: 280px;
   height: 280px;
@@ -2059,6 +1964,14 @@ body {
   transform: scale(1.1);
 }
 
+.socialContainer img{
+  filter: invert(100%);
+}
+
+.social-footer img {
+  filter: invert(100%);
+}
+
 .socialContainer:active {
   transform: scale(0.95);
 }
@@ -2275,6 +2188,63 @@ body {
 }
 
 /* ===============================================
+   CONTACTO - TEL INPUT CUSTOM
+   =============================================== */
+
+.telefono-group .iti {
+  width: 100%;
+}
+
+.telefono-group input#telefono {
+  padding-left: 90px !important;
+  color: #ffffff;
+}
+
+.telefono-group label {
+  left: 90px;
+  z-index: 5;
+}
+
+.telefono-group .iti:focus-within ~ label,
+.telefono-group input#telefono:not(:placeholder-shown) ~ label {
+  top: -10px;
+  left: 16px;
+  font-size: 0.8rem;
+  color: var(--primary-cyan);
+  font-weight: 500;
+  transform: translateY(0);
+}
+
+.telefono-group input#telefono.invalid ~ .error-message {
+  display: block;
+}
+
+.telefono-group input#telefono.invalid ~ label {
+  color: #ff3333;
+}
+
+.telefono-group .iti__selected-flag {
+  background: transparent;
+  border-right: 1px solid rgba(50, 178, 207, 0.3);
+  padding-right: 10px;
+}
+
+.iti__country-list {
+  background-color: #13131a !important;
+  border: 1px solid #32B2CF !important;
+  color: white !important;
+  z-index: 100;
+}
+
+.iti__country:hover {
+  background-color: rgba(50, 178, 207, 0.2) !important;
+}
+
+.iti__dial-code {
+  color: var(--primary-cyan);
+}
+
+/* ===============================================
   CONTACTO - CUBO RUBIK
    =============================================== */
 
@@ -2453,8 +2423,7 @@ body {
 }
 
 .social-footer:hover {
-  background: #32B2CF;
-  color: #13131A;
+  color: #ffffff;
   transform: translateY(-3px);
   box-shadow: 0 8px 20px rgba(50, 178, 207, 0.2);
   border-color: #32B2CF;
@@ -2509,4 +2478,22 @@ body {
   .footer-brand p {
     font-size: 0.9rem;
   }
+}
+
+.iti {
+  width: 100%;
+}
+
+.iti__country-list {
+  background-color: #040609;
+  color: #ffffff;
+}
+
+.iti__country-name,
+.iti__dial-code {
+  color: #ffffff;
+}
+
+.iti__country:hover {
+  background-color: rgba(255,255,255,0.08);
 }

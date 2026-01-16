@@ -440,3 +440,28 @@ if (document.readyState === 'loading') {
 } else {
   showContactResultFromQuery();
 }
+
+/*LIBRERIA INTL-TEL-INPUT PARA EL INDICATIVO DE CELULAR DEL FORMULARIO DE CONTACTO*/
+  document.addEventListener("DOMContentLoaded", function () {
+  const phoneInput = document.querySelector("#telefono");
+
+  if (phoneInput) {
+    window.iti = window.intlTelInput(phoneInput, {
+      initialCountry: "auto",
+      geoIpLookup: function(callback) {
+        fetch("https://ipapi.co/json")
+        .then(res => res.json())
+        .then(data => callback(data.country_code))
+        .catch(() => callback("co"));
+      },
+      preferredCountries: ["co", "mx", "es", "us"],
+      separateDialCode: true,
+      nationalMode: false,
+      autoPlaceholder: "off",
+      utilsScript:
+        "https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/utils.js"
+    });
+  }
+  console.log(iti.getNumber());
+
+});
