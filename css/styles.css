@@ -1864,7 +1864,8 @@ body {
 }
 
 .contact-info {
-  text-align: left;
+  text-align: center;
+  margin: 50px 0;
 }
 
 .contact-info > p {
